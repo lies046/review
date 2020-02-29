@@ -1,5 +1,16 @@
 <div class = "review">
   <p><%= revue.rating %> </p>
   <p class = "review-comment"><%= revue.comment %></p>
+
+  <% if user_signed_in? %>
+    <% if revue.user_id == current_user.id %>
+      <div class="links btn-group">
+        <%= link_to "Edit", edit_play_revue_path(revue.play, revue),
+        class: "btn btn-custom" %>
+        <%= link_to "Delete", play_revue_path(revue.play, revue),
+      method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-custom" %>
+    <% end %>
+    <% end %>
 </div>
+
  
