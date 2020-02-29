@@ -1,4 +1,4 @@
 class Revue < ApplicationRecord
-  belong_to :play
-  belong_to :user
+  belongs_to :play
+  belongs_to :user
 end

@@ -2,7 +2,7 @@ class RevuesController < ApplicationController
   before_action :find_play 
 
   def new
-    @review = Review.new
+    @review = Revue.new
   end
 
   def create
