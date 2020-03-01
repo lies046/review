@@ -1,5 +1,5 @@
 <div class = "review">
-  <p><%= revue.rating %> </p>
+  <div class="review-rating" data-score="<%= revue.rating %>"></div>
   <p class = "review-comment"><%= revue.comment %></p>
 
   <% if user_signed_in? %>
